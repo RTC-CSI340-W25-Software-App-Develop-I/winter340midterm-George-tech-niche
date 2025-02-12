@@ -8,9 +8,21 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/GTts5bFD) # 340 Midterm Deliverables",
   "devDependencies": {
-    "chai": "^5.1.1",
-    "mocha": "^10.7.3"
-  }
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RTC-CSI340-W25-Software-App-Develop-I/winter340midterm-George-tech-niche.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/RTC-CSI340-W25-Software-App-Develop-I/winter340midterm-George-tech-niche/issues"
+  },
+  "homepage": "https://github.com/RTC-CSI340-W25-Software-App-Develop-I/winter340midterm-George-tech-niche#readme"
 }

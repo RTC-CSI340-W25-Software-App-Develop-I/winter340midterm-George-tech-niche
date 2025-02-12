@@ -22,6 +22,69 @@ const reviews = [
       "The coffee was great but the employees didn't let me stay past closing! ): Worst experience ever.",
   },
 ];
+
+function renderReview(review) {
+  // create a container for the review
+  const container = document.createElement("div");
+  container.ClassName = "review_container";
+
+  // create profile image
+  const img = document.createElement("img");
+  img.src = review.image;
+
+  //create user info and review content
+  const info =document.createElement("div");
+  const username = document.createElement("p");
+  username.textContent = review.username;
+
+  const stars = document.createElement("p");
+  stars.textContent = `⭐${review.star}`
+
+  const text = document.createElement("p")
+  text.textContent = review.review;
+
+  // append details to the info contaner
+  info.append(username, stars, text);
+
+  //appending info and image to the container
+  container.append(img, info);
+
+  // append the container and info to the reviews section
+  document.querySelector('.reviews').appendChild(container);
+
+}
+
+
+// render all existing reviews 
+reviews.forEach(renderReview);
+
+// file submission handling to add new reviews
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
+ e.preventDefault();
+
+ // extract values from the form fields
+ const username = e.target.username.value;
+ const image = e.target.image.value || './image/cafe.png'   //default image
+ const star = parseInt(e.target.star.value);
+ const review = e.target.review.value;
+
+ // create a new review object
+ const newReview = {username, image, star, review};
+
+ // add the new review to the reviews array
+ reviews.push(newReview);
+
+ renderReview(newReview);
+
+ //reset the form
+ form.reset();
+
+
+} );
+
+
+
 /////////////////////////////////////////////////////////////////////
 
 //1. Append the reviews to the DOM
